@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Chirp;
 use Livewire\Component;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
@@ -21,6 +22,9 @@ class CreateChirp extends Component
         ]);
 
         $this->reset();
+
+        session()->flash('message', 'Post successfully updated.');
+    
     } 
 
     public function render()

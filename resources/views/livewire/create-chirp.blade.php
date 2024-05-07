@@ -12,6 +12,11 @@
                     </ul>
                 </div>
                 @endif
+                @if (session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session('message') }}
+                </div>
+                @endif
                 <form class="rounded-4 shadow bg-secondary-subtle p-3" wire:submit="store">
                     <div class="mb-3">
                         <label for="text" class="form-label">Chirp:</label>

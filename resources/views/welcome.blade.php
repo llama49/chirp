@@ -4,4 +4,6 @@
     <livewire:create-chirp />
     @endauth
 
+    <livewire:index-chirp />
+
 </x-layout>
