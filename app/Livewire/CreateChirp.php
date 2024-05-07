@@ -24,7 +24,8 @@ class CreateChirp extends Component
         $this->reset();
 
         session()->flash('message', 'Post successfully updated.');
-    
+
+        return redirect('/');
     } 
 
     public function render()

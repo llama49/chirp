@@ -9,5 +9,9 @@ class PublicController extends Controller
     public function welcome() {
         return view('welcome');
     }
+
+    public function chirp() {
+        return view('chirp/user');
+    }
     
 }
