@@ -2,8 +2,19 @@
 
     <div class="container">
         <div class="row justify-content-center">
+            <div class="col-12">
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+            </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <form action="{{#}}" method="POST">
+                <form class="rounded-4 shadow bg-secondary-subtle p-3" action="{{'register'}}" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Username</label>
@@ -27,7 +38,9 @@
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Ricordami</label>
                     </div> -->
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="text-center ">
+                        <button type="submit" class="btn btn-outline-light">Submit</button>
+                    </div>
                 </form>
             </div>
         </div>

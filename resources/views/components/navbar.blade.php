@@ -15,7 +15,7 @@
 
                 @auth
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">{{Auth::user()->name}}</a>
                 </li>
                 @endauth
 
