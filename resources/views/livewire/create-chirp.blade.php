@@ -22,6 +22,9 @@
                         <!-- <label for="text" class="form-label">Chirp:</label> -->
                         <textarea name="text" wire:model="text" placeholder="Cosa penso..." class="form-control" rows="2" id="text"></textarea>
                     </div>
+
+                    <livewire:tags-create/>
+
                     <div class="text-center">
                         <button type="submit" class="btn btn-outline-light">CHIRP</button>
                     </div>

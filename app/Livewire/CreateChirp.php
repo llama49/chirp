@@ -12,6 +12,8 @@ class CreateChirp extends Component
     #[Validate('required', message: 'il tuo chirp deve contenere almeno un carattere')]
     public $text;
 
+    public $name;
+
     public function store()
     {
 
@@ -24,6 +26,8 @@ class CreateChirp extends Component
         $this->reset();
 
         session()->flash('message', 'Post successfully updated.');
+
+        dd($tags);
 
         return redirect('/');
     } 
