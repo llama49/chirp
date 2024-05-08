@@ -26,10 +26,14 @@ class CreateChirp extends Component
 
         //tags??
         $array_tags = explode('#', $this->tags);
+
         foreach ($array_tags as $tag_name) {
-            $tag = Tag::firstOrCreate(['name' => strtolower($tag_name)]);
-            $chirp->tags()->attach($tag->id);
+            if(strtolower($tag_name)) {
+                $tag = Tag::firstOrCreate(['name' => strtolower($tag_name)]);  
+                $chirp->tags()->attach($tag->id);  
+            }
         }
+        dd($chirp->tags);
 
         $this->reset();
 

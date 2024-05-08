@@ -20,10 +20,10 @@ Todo list:
 Modello Tag
     campo content
         operazioni CRUD [leggi bene]
-        -sotto al chirp, inserire un input dove scrivere i tag - es. Sport, Serie B, Bari
-        -nella store dei chirps, creare un tag per ogni inserimento
-        -i tag saranno a prescindere tutti in minuscolo
-        -se il tag gia' esiste, non creare uno nuovo (cerca sulla documentazione!)
+        [x]sotto al chirp, inserire un input dove scrivere i tag - es. Sport, Serie B, Bari
+        [x]nella store dei chirps, creare un tag per ogni inserimento
+        [x]i tag saranno a prescindere tutti in minuscolo
+        [x]se il tag gia' esiste, non creare uno nuovo (cerca sulla documentazione!)
 
 Relazione Many-to-Many tra Tag e Chirp
 
