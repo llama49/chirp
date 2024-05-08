@@ -8,6 +8,11 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">{{$chirp->user->name}} dice:</li>
                         <li class="list-group-item">"{{$chirp->text}}"</li>
+                        <li class="list-group-item">
+                            @foreach ($chirp->tags as $tag)
+                            <span class="badge text-bg-dark">#{{$tag->name}}</span>
+                            @endforeach                            
+                        </li>
                         <!-- <li class="list-group-item">A third item</li> -->
                     </ul>
                 </div>

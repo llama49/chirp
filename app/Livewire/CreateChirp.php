@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Tag;
 use App\Models\Chirp;
 use Livewire\Component;
 use Livewire\Attributes\Validate;
@@ -12,22 +13,27 @@ class CreateChirp extends Component
     #[Validate('required', message: 'il tuo chirp deve contenere almeno un carattere')]
     public $text;
 
-    public $name;
+    public $tags;
 
     public function store()
     {
 
         $this->validate();
-        // dd(Auth::user()->chirps());
-        Auth::user()->chirps()->create([
+        
+        $chirp = Auth::user()->chirps()->create([
             'text'=>$this->text,
         ]);
+
+        //tags??
+        $array_tags = explode('#', $this->tags);
+        foreach ($array_tags as $tag_name) {
+            $tag = Tag::firstOrCreate(['name' => strtolower($tag_name)]);
+            $chirp->tags()->attach($tag->id);
+        }
 
         $this->reset();
 
         session()->flash('message', 'Post successfully updated.');
-
-        dd($tags);
 
         return redirect('/');
     } 

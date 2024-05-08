@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Chirp;
+use App\Models\Tag;
 use Livewire\Component;
 
 class IndexChirp extends Component
