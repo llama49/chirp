@@ -1,23 +1,22 @@
 Todo list:
     Creare un nuovo progetto Laravel
     Utilizzare tutte le best practice usate finora
-        -Named Routes
-        -Controller
-        -Components
-        -Scaffolding con Laravel Vite
-        -Autenticazione con Laravel Fortify
-        -login
-        -register
-        -logout
+        [x]Named Routes
+        [x]Controller
+        [x]Components
+        [x]Scaffolding con Laravel Vite
+        [x]Autenticazione con Laravel Fortify
+        [x]login
+        [x]register
+        [x]logout
     (Vorrei che quello qui sotto lo proviate a fare con Livewire, se non ve la sentite con CRUD normale va benissimo)
     Modello Chirp
-        -campo content
-        -operazioni CRUD [leggi bene]
-        -in homepage in alto, form per scrivere un chirp
-        -in homepage, si vedono tutti i chirps degli utenti sotto forma di cards dal piu' recente
-        -su ogni chirp, bottone di modifica e cancellazione
-
-    Relazione One-to-Many tra User e Chirp
+        [x]campo content
+        [x]operazioni CRUD [leggi bene]
+        [x]in homepage in alto, form per scrivere un chirp
+        [x]in homepage, si vedono tutti i chirps degli utenti sotto forma di cards dal piu' recente
+        [x]su ogni chirp, bottone di modifica e cancellazione
+        [x]Relazione One-to-Many tra User e Chirp
 Modello Tag
     campo content
         operazioni CRUD [leggi bene]

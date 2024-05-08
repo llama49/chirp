@@ -12,23 +12,18 @@
                     </ul>
                 </div>
                 @endif
-                @if (session()->has('message'))
-                <div class="alert alert-success">
-                    {{ session('message') }}
-                </div>
-                @endif
-                <form class="rounded-4 shadow bg-secondary-subtle p-3" wire:submit="store">
+                <form class="rounded-4 shadow bg-secondary-subtle p-3" wire:submit="edit">
                     <div class="mb-3">
                         <!-- <label for="text" class="form-label">Chirp:</label> -->
-                        <textarea name="text" wire:model="text" placeholder="Cosa penso..." class="form-control" rows="2" id="text"></textarea>
+                        <textarea name="text" wire:model="text" class="form-control" rows="2" id="text">{{$chirp->text}}</textarea>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-outline-light">CHIRP</button>
+                        <button type="submit" class="btn btn-outline-light">Confirm Edit</button>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
+
 
 </div>
